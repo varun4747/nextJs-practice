@@ -14,7 +14,7 @@ export default function Navbar() {
             <Link href="/" style={styles.link}>Home</Link>
             <Link href="/about" style={styles.link}>About</Link>
             <Link href="/contact" style={styles.link}>Contact</Link>
-            <Link href="./SignIn" style={styles.link}>Sign In</Link>
+            <Link href="/SignIn" style={styles.link}>Sign In</Link>
             <Link href="/signup" style={styles.link}>Sign Up</Link>
           </div>
         </nav>
