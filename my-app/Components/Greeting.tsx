@@ -1,11 +1,17 @@
 interface GreetingProps {
-    name: string;
+    id:number;
+    name?: string;
+    email:string;
+    password:string;
 }
-function Greeting(props: GreetingProps) {
+function Greeting({id,name="Guest",email,password}: GreetingProps) {
     return (
         <>
         <div>
-            <h1>{props.name}</h1>;
+            <h4>Id: {id}</h4>
+            <h3>{name}</h3>
+            <p>Email: {email}</p>
+            <p>Password: {password}</p>
         </div>
         </>
     );

@@ -3,7 +3,7 @@ function page(){
   return(
     <>
     <div>
-      <Greeting name="Hello World" />
+      <Greeting id={1}  email="hello@example.com" password="password123" />
       </div>
       </>
   );
