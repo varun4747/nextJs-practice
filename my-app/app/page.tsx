@@ -1,18 +1,20 @@
 'use client'
 import Child from"../Components/Child";
 import { useState } from "react";
+
+
 export default function page(){
-const [message,setMessage]=useState("");
-
-
-  const handleChange=((info:string)=>{
-    setMessage(info);
-  })
+const [message,setMessage]=useState({
+      id: 1,
+      name: "Rahul Mehta",
+      position: "Software Engineer",
+      salary: 60000,
+      createdAt: "2025-12-09T10:00:00Z"
+    });
   return(
     <>
     <div>
-      <h3>messege from child : {message}</h3>
-      <Child sendMessage={handleChange} />
+    <Child users={message}/>
     </div>
     </>
   );
