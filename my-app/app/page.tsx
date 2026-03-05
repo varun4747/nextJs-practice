@@ -1,11 +1,19 @@
-import Greeting from "@/Components/Greeting";
-function page(){
+'use client'
+import Child from"../Components/Child";
+import { useState } from "react";
+export default function page(){
+const [message,setMessage]=useState("");
+
+
+  const handleChange=((info:string)=>{
+    setMessage(info);
+  })
   return(
     <>
     <div>
-      <Greeting id={1}  email="hello@example.com" password="password123" />
-      </div>
-      </>
+      <h3>messege from child : {message}</h3>
+      <Child sendMessage={handleChange} />
+    </div>
+    </>
   );
 }
-export default page;
