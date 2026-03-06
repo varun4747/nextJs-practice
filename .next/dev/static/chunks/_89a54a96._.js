@@ -34,9 +34,13 @@ function UseEffectPractice() {
         }
     }["UseEffectPractice.useEffect"], []);
     const employeeData = async ()=>{
-        const response = await fetch("http://localhost:4000/Employees");
-        const data = await response.json();
-        setEmployee(data);
+        try {
+            const response = await fetch("http://localhost:4000/Employees");
+            const data = await response.json();
+            setEmployee(data);
+        } catch (error) {
+            console.error("data not fetched");
+        }
     };
     return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
         className: "container",
@@ -46,8 +50,8 @@ function UseEffectPractice() {
                         children: emp.id
                     }, void 0, false, {
                         fileName: "[project]/Components/UseEffectPractice.tsx",
-                        lineNumber: 41,
-                        columnNumber: 17
+                        lineNumber: 46,
+                        columnNumber: 21
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("li", {
                         children: [
@@ -56,46 +60,46 @@ function UseEffectPractice() {
                         ]
                     }, void 0, true, {
                         fileName: "[project]/Components/UseEffectPractice.tsx",
-                        lineNumber: 42,
-                        columnNumber: 17
+                        lineNumber: 47,
+                        columnNumber: 21
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("li", {
                         children: emp.department
                     }, void 0, false, {
                         fileName: "[project]/Components/UseEffectPractice.tsx",
-                        lineNumber: 43,
-                        columnNumber: 17
+                        lineNumber: 48,
+                        columnNumber: 21
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("li", {
                         children: emp.email
                     }, void 0, false, {
                         fileName: "[project]/Components/UseEffectPractice.tsx",
-                        lineNumber: 44,
-                        columnNumber: 17
+                        lineNumber: 49,
+                        columnNumber: 21
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("li", {
                         children: emp.salary
                     }, void 0, false, {
                         fileName: "[project]/Components/UseEffectPractice.tsx",
-                        lineNumber: 45,
-                        columnNumber: 17
+                        lineNumber: 50,
+                        columnNumber: 21
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("li", {
                         children: emp.city
                     }, void 0, false, {
                         fileName: "[project]/Components/UseEffectPractice.tsx",
-                        lineNumber: 46,
-                        columnNumber: 17
+                        lineNumber: 51,
+                        columnNumber: 21
                     }, this)
                 ]
             }, index, true, {
                 fileName: "[project]/Components/UseEffectPractice.tsx",
-                lineNumber: 40,
+                lineNumber: 45,
                 columnNumber: 17
             }, this))
     }, void 0, false, {
         fileName: "[project]/Components/UseEffectPractice.tsx",
-        lineNumber: 38,
+        lineNumber: 43,
         columnNumber: 9
     }, this);
 }

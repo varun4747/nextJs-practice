@@ -1,13 +1,13 @@
 import { useState, useEffect } from "react";
 interface Employee {
-  id: number;
-  firstName: string;
-  lastName: string;
-  email: string;
-  department: string;
-  designation: string;
-  salary: number;
-  city: string;
+    id: number;
+    firstName: string;
+    lastName: string;
+    email: string;
+    department: string;
+    designation: string;
+    salary: number;
+    city: string;
 }
 function UseEffectPractice() {
     // const [count, setCount] = useState(0);
@@ -30,20 +30,25 @@ function UseEffectPractice() {
         employeeData();
     }, [])
     const employeeData = async () => {
-        const response = await fetch("http://localhost:4000/Employees");
-        const data = await response.json();
-        setEmployee(data);
+        try {
+            const response = await fetch("http://localhost:4000/Employees");
+            const data = await response.json();
+            setEmployee(data);
+        } catch (error) {
+            console.error("data not fetched");
+        }
+
     }
     return (
         <div className="container">
-            {employee.map((emp:Employee,index:number)=>(
+            {employee.map((emp: Employee, index: number) => (
                 <ul key={index}>
-                <li>{emp.id}</li>
-                <li>{emp.lastName}{emp.lastName}</li>
-                <li>{emp.department}</li>
-                <li>{emp.email}</li>
-                <li>{emp.salary}</li>
-                <li>{emp.city}</li>               
+                    <li>{emp.id}</li>
+                    <li>{emp.lastName}{emp.lastName}</li>
+                    <li>{emp.department}</li>
+                    <li>{emp.email}</li>
+                    <li>{emp.salary}</li>
+                    <li>{emp.city}</li>
                 </ul>
             ))}
         </div>
