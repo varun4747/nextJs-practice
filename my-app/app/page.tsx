@@ -1,6 +1,7 @@
 'use client'
 import Child from"../Components/Child";
 import { useState } from "react";
+import UseStatePractice from "@/Components/UseStatePractice";
 
 
 export default function page(){
@@ -15,6 +16,7 @@ const [message,setMessage]=useState({
     <>
     <div>
     <Child users={message}/>
+    <UseStatePractice/>
     </div>
     </>
   );
