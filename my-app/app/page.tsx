@@ -1,13 +1,7 @@
-'use client'
-import Child from"../Components/ComponentAdding";
-export default function page(){
-
+export default function(){
   return(
-    <>
     <div>
-    <Child />
-    
+      <h3>this is home page</h3>
     </div>
-    </>
   );
 }
