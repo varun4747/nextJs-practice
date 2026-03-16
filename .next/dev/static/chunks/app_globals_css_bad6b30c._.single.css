@@ -26,6 +26,7 @@
   :root, :host {
     --font-sans: ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
     --font-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+    --color-green-500: #00c758;
     --color-sky-500: #00a5ef;
     --color-sky-700: #0069a4;
     --color-slate-800: #1d293d;
@@ -45,6 +46,7 @@
 
   @supports (color: lab(0% 0 0)) {
     :root, :host {
+      --color-green-500: lab(70.5521% -66.5147 45.8072);
       --color-sky-500: lab(63.3038% -18.433 -51.0407);
       --color-sky-700: lab(41.6013% -9.10804 -42.5648);
       --color-slate-800: lab(16.132% -.318021 -14.6672);
@@ -374,8 +376,16 @@
     border-radius: var(--radius-xl);
   }
 
+  .bg-green-500 {
+    background-color: var(--color-green-500);
+  }
+
   .bg-sky-500 {
     background-color: var(--color-sky-500);
+  }
+
+  .p-4 {
+    padding: calc(var(--spacing) * 4);
   }
 
   .p-6 {
@@ -388,6 +398,10 @@
 
   .py-2 {
     padding-block: calc(var(--spacing) * 2);
+  }
+
+  .text-center {
+    text-align: center;
   }
 
   .text-xl {
