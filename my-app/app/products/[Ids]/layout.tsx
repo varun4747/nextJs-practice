@@ -1,9 +1,3 @@
-import Navbar from "@/Components/Navbar";
-import "./globals.css";
-import "bootstrap/dist/css/bootstrap.min.css";
-import Footer from "@/Components/Footer";
-
-
 export default function RootLayout({
   children,
 }: Readonly<{
@@ -12,9 +6,9 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body>
-        <Navbar/>
+        
         {children}
-         <Footer/>
+         <h1>this is ids page</h1>
         
       </body>
     </html>
